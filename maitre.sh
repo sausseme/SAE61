@@ -24,24 +24,9 @@ if [ $? != 0 ]; then
 	./filldb.sh
 fi
 
-./build_image.sh
-
-if [ $? != 0 ]; then 
-        echo "echec de lancement du script  build_image.sh"
-        exit 666
-fi
-
-./tp4-app.sh
+./launch.sh
 
 if [ $? != 0 ]; then 
         echo "echec de lancement du script  tp4-app.sh"
         exit 666
 fi
-
-python3 app.py
-
-if [ $? != 0 ]; then 
-        echo "echec de lancement du script  tp4-app.sh"
-        exit 666
-fi
-
