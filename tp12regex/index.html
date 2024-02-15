@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Accueil</h1>
+    <h2>Liste des utilisateurs :</h2>
+    <ul>
+        {% for user in data %}
+            <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Ajouter un nouvel utilisateur :</h2>
+    <form action="/newuser" method="post">
+        <label for="username">Nom d'utilisateur:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <input type="submit" value="Envoyer">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
