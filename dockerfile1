@@ -8,7 +8,7 @@ RUN apt-get install -y python-dev
 RUN apt-get install -y python3-pip 
 RUN apt-get install -y default-libmysqlclient-dev
 RUN pip3 install --upgrade pip
-RUN pip3 install flask-mysqldb mysql-connector-python
+RUN pip3 install pymysql
 RUN  mkdir -p /srv/templates
 
 COPY index.html /srv/templates/

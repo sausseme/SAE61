@@ -24,6 +24,20 @@ if [ $? != 0 ]; then
 	./filldb.sh
 fi
 
+./build_image.sh
+
+if [ $? != 0 ]; then
+	echo "echec de lancement du script  create_network.sh"
+	exit 666
+fi
+
+./tp4-app.sh
+
+if [ $? != 0 ]; then
+	echo "echec de lancement du script  create_network.sh"
+	exit 666
+fi
+
 ./launch.sh
 
 if [ $? != 0 ]; then 
