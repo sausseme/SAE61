@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Shell script
-      - run: ./tp-r504/sae61-1/maitre.sh
+      - run: maitre.sh
