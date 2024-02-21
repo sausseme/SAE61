@@ -1,0 +1,9 @@
+name : tests unitaires
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Shell script
+      - run: ./tp-r504/sae61-1/maitre.sh
